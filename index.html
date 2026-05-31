@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dim Sum House — Handcrafted Dumplings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <span>🥟</span> Dim Sum House <span class="logo-dot"></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn btn-outline" onclick="openModal('login')">Sign In</button>
+    <button class="btn btn-solid cart-btn" id="cartBtn">
+      🛒 Cart
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="toggleMobile()">🏠 Home</a>
+  <a href="#blog" onclick="toggleMobile()">📰 Blog</a>
+  <a href="#menu" onclick="toggleMobile()">🥟 Menu</a>
+  <a href="#reviews" onclick="toggleMobile()">⭐ Reviews</a>
+  <a href="#contact" onclick="toggleMobile()">✉️ Contact</a>
+  <button class="btn btn-solid" onclick="openModal('login'); toggleMobile();" style="margin-top:8px;">Sign In</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">✨ Handcrafted since 1998</div>
+    <h1>Authentic <em>Dim Sum</em><br>Straight from<br>Hong Kong</h1>
+    <p>Each piece is hand-folded with care, filled with premium ingredients, and steamed to silky perfection. Experience tradition in every bite.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-solid" style="font-size:1rem; padding:12px 28px;">Order Now 🥟</a>
+      <a href="#blog" class="btn btn-outline" style="font-size:1rem; padding:12px 28px;">Read Blog</a>
+    </div>
+  </div>
+  <div class="hero-dumplings">
+    <div class="dumpling-card">
+      <div class="dumpling-emoji">🥟</div>
+      <div class="dumpling-info">
+        <h4>Ha Gow</h4>
+        <span>Shrimp Dumpling</span>
+        <span class="price-tag">$8.50</span>
+      </div>
+    </div>
+    <div class="dumpling-card">
+      <div class="dumpling-emoji">🍱</div>
+      <div class="dumpling-info">
+        <h4>Siu Mai</h4>
+        <span>Pork & Shrimp</span>
+        <span class="price-tag">$7.90</span>
+      </div>
+    </div>
+    <div class="dumpling-card">
+      <div class="dumpling-emoji">🫕</div>
+      <div class="dumpling-info">
+        <h4>Congee</h4>
+        <span>Rice Porridge</span>
+        <span class="price-tag">$6.50</span>
+      </div>
+    </div>
+    <div class="dumpling-card">
+      <div class="dumpling-emoji">🍡</div>
+      <div class="dumpling-info">
+        <h4>Cheung Fun</h4>
+        <span>Rice Noodle Roll</span>
+        <span class="price-tag">$9.00</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="posts-header">
+    <div>
+      <div class="section-label">From Our Kitchen</div>
+      <div class="section-title">Latest Stories &amp; Recipes</div>
+    </div>
+    <a href="#" class="view-all">View all posts →</a>
+  </div>
+
+  <!-- FEATURED BANNER -->
+  <div class="featured-banner">
+    <div class="banner-content">
+      <div class="banner-tag">⭐ Featured</div>
+      <h2>The Art of Folding Ha Gow: A Step-by-Step Guide</h2>
+      <p>Learn the secret technique behind perfectly pleated shrimp dumplings — the dish that defines a true dim sum master. From dough to bamboo steamer.</p>
+      <a href="#" class="btn btn-solid" style="width:fit-content; padding:11px 26px;">Read Article →</a>
+    </div>
+    <div class="banner-visual">🥟</div>
+  </div>
+
+  <!-- POST CARDS -->
+  <div class="posts-grid">
+    <div class="post-card">
+      <div class="post-thumb">🫖<span class="post-cat">Tea Culture</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>May 28, 2025</span><span class="dot"></span><span>5 min read</span>
+        </div>
+        <h3><a href="#">Why Pu-erh Tea is the Perfect Companion to Dim Sum</a></h3>
+        <p>The earthy, aged notes of pu-erh cut through the richness of fatty meats and cleanse the palate between bites.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#C0392B;">LW</div>
+            <span>Lily Wong</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-thumb">🍢<span class="post-cat">Recipe</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>May 22, 2025</span><span class="dot"></span><span>8 min read</span>
+        </div>
+        <h3><a href="#">Making Cheung Fun at Home: Silky Rice Noodle Rolls</a></h3>
+        <p>No special equipment needed. Just a wide pan, rice flour, and a few simple fillings to recreate this dim sum classic.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#D4AC0D;">KC</div>
+            <span>Kevin Chan</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-thumb">🏮<span class="post-cat">History</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>May 15, 2025</span><span class="dot"></span><span>6 min read</span>
+        </div>
+        <h3><a href="#">Yum Cha: The 2,000-Year-Old Tradition Behind Dim Sum</a></h3>
+        <p>From ancient Silk Road teahouses to your Sunday brunch table — the fascinating origins of drinking tea and nibbling snacks together.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#1A5276;">MC</div>
+            <span>Mei Chen</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-thumb">🥩<span class="post-cat">Recipe</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>May 10, 2025</span><span class="dot"></span><span>7 min read</span>
+        </div>
+        <h3><a href="#">Char Siu Bao: Perfecting the BBQ Pork Bun</a></h3>
+        <p>Fluffy dough, glossy filling, the perfect ratio of sweet and savory — baked or steamed, this bun needs no introduction.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#117A65;">JL</div>
+            <span>James Lee</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-thumb">🍮<span class="post-cat">Dessert</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>May 5, 2025</span><span class="dot"></span><span>4 min read</span>
+        </div>
+        <h3><a href="#">Egg Tarts: Hong Kong vs Macanese — The Great Debate</a></h3>
+        <p>Flaky pastry or shortcrust shell? Silky custard or slightly caramelized top? We compare the two iconic versions side by side.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#922B21;">SW</div>
+            <span>Sara Wu</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-thumb">🫙<span class="post-cat">Tips</span></div>
+      <div class="post-body">
+        <div class="post-meta">
+          <span>Apr 29, 2025</span><span class="dot"></span><span>5 min read</span>
+        </div>
+        <h3><a href="#">6 Dim Sum Etiquette Rules Every First-Timer Should Know</a></h3>
+        <p>Tapping two fingers to say thank you, filling others' cups first, and never stabbing chopsticks upright — essential table manners explained.</p>
+        <div class="post-footer">
+          <div class="author">
+            <div class="avatar" style="background:#6C3483;">AL</div>
+            <span>Amy Liu</span>
+          </div>
+          <a href="#" class="read-more">Read →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU/SHOP -->
+<section id="menu" class="menu-section">
+  <div class="section-label">Our Menu</div>
+  <div class="section-title">Order Fresh Today</div>
+  <p class="section-desc" style="margin-bottom:32px;">All items made to order. Free delivery on orders above $35. Same-day pickup available.</p>
+
+  <div class="menu-tabs">
+    <button class="tab active" onclick="switchTab('steamed')">🥟 Steamed</button>
+    <button class="tab" onclick="switchTab('baked')">🥐 Baked</button>
+    <button class="tab" onclick="switchTab('rice')">🍚 Rice &amp; Noodles</button>
+    <button class="tab" onclick="switchTab('dessert')">🍮 Desserts</button>
+  </div>
+
+  <!-- Steamed -->
+  <div class="tab-panel active" id="tab-steamed">
+    <div class="menu-item">
+      <div class="menu-emoji">🥟</div>
+      <div class="menu-item-name">Ha Gow <span class="badge-new">New</span></div>
+      <div class="menu-item-desc">Delicate shrimp dumplings in translucent rice-flour wrappers, steamed until just tender. 4 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$8.50</span>
+        <button class="add-btn" onclick="addToCart('Ha Gow', 8.50)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🍱</div>
+      <div class="menu-item-name">Siu Mai</div>
+      <div class="menu-item-desc">Open-topped dumplings filled with pork and shrimp, garnished with roe. 4 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$7.90</span>
+        <button class="add-btn" onclick="addToCart('Siu Mai', 7.90)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🥬</div>
+      <div class="menu-item-name">Vegetable Dumplings</div>
+      <div class="menu-item-desc">Seasonal greens, mushrooms and tofu wrapped in delicate jade-colored skins. 4 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$7.50</span>
+        <button class="add-btn" onclick="addToCart('Vegetable Dumplings', 7.50)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🦐</div>
+      <div class="menu-item-name">Crystal Prawn Roll</div>
+      <div class="menu-item-desc">Whole tiger prawns wrapped in crystal skin, lightly sauced with XO chili. 3 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$10.50</span>
+        <button class="add-btn" onclick="addToCart('Crystal Prawn Roll', 10.50)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Baked -->
+  <div class="tab-panel" id="tab-baked">
+    <div class="menu-item">
+      <div class="menu-emoji">🥩</div>
+      <div class="menu-item-name">Char Siu Bao</div>
+      <div class="menu-item-desc">Fluffy steamed or golden baked bun stuffed with honey-glazed BBQ pork. 3 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$9.00</span>
+        <button class="add-btn" onclick="addToCart('Char Siu Bao', 9.00)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🥐</div>
+      <div class="menu-item-name">Cocktail Bun <span class="badge-new">New</span></div>
+      <div class="menu-item-desc">Soft milk-bread bun with a sweet coconut-butter filling. Bakery favourite. 2 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$6.50</span>
+        <button class="add-btn" onclick="addToCart('Cocktail Bun', 6.50)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🍞</div>
+      <div class="menu-item-name">Pineapple Bolo Bun</div>
+      <div class="menu-item-desc">Crunchy cookie-crust top, pillowy interior, served warm with a pat of butter. 2 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$6.00</span>
+        <button class="add-btn" onclick="addToCart('Pineapple Bolo Bun', 6.00)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rice -->
+  <div class="tab-panel" id="tab-rice">
+    <div class="menu-item">
+      <div class="menu-emoji">🍡</div>
+      <div class="menu-item-name">Cheung Fun</div>
+      <div class="menu-item-desc">Silky rice noodle rolls with your choice of shrimp, beef or char siu, served with sweet soy.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$9.00</span>
+        <button class="add-btn" onclick="addToCart('Cheung Fun', 9.00)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🫕</div>
+      <div class="menu-item-name">Congee / Jook</div>
+      <div class="menu-item-desc">Velvety rice porridge slow-cooked for 4 hours. Choose plain, century egg & pork, or seafood.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$6.50</span>
+        <button class="add-btn" onclick="addToCart('Congee', 6.50)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🍚</div>
+      <div class="menu-item-name">Lo Mai Gai</div>
+      <div class="menu-item-desc">Sticky glutinous rice stuffed with chicken, mushrooms and lap cheong, steamed in lotus leaf.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$8.00</span>
+        <button class="add-btn" onclick="addToCart('Lo Mai Gai', 8.00)">+</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dessert -->
+  <div class="tab-panel" id="tab-dessert">
+    <div class="menu-item">
+      <div class="menu-emoji">🍮</div>
+      <div class="menu-item-name">Egg Tart (HK Style)</div>
+      <div class="menu-item-desc">Buttery flaky shell with a wobbling, silky custard centre. Fresh from oven. 2 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$5.50</span>
+        <button class="add-btn" onclick="addToCart('Egg Tart', 5.50)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🧁</div>
+      <div class="menu-item-name">Mango Pudding</div>
+      <div class="menu-item-desc">Chilled Alphonso mango pudding, set to a trembling silkiness. Served with evaporated milk.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$5.00</span>
+        <button class="add-btn" onclick="addToCart('Mango Pudding', 5.00)">+</button>
+      </div>
+    </div>
+    <div class="menu-item">
+      <div class="menu-emoji">🍊</div>
+      <div class="menu-item-name">Sesame Ball <span class="badge-new">New</span></div>
+      <div class="menu-item-desc">Crisp fried glutinous rice ball coated in sesame seeds, filled with lotus paste. 3 pcs.</div>
+      <div class="menu-item-footer">
+        <span class="menu-price">$6.00</span>
+        <button class="add-btn" onclick="addToCart('Sesame Ball', 6.00)">+</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" class="reviews-section">
+  <div class="section-label">What Customers Say</div>
+  <div class="section-title">Loved by Thousands</div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"The ha gow here is genuinely the best I've had outside of Hong Kong. Thin, translucent, and the shrimp filling is so fresh. We order every Sunday."</p>
+      <div class="reviewer">
+        <div class="avatar" style="background:#C0392B; width:36px; height:36px; font-size:0.75rem;">JT</div>
+        <div class="reviewer-info"><strong>Jessica T.</strong><span>Regular customer</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Their blog recipes are incredible — I tried making cheung fun at home following the guide and it worked perfectly on my first attempt!"</p>
+      <div class="reviewer">
+        <div class="avatar" style="background:#1A5276; width:36px; height:36px; font-size:0.75rem;">MR</div>
+        <div class="reviewer-info"><strong>Marcus R.</strong><span>Blog reader</span></div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="stars">★★★★★</div>
+      <p class="review-text">"Ordered the full dim sum set for a family gathering — arrived hot, beautifully packed, and every single piece was flawless. Will definitely order again."</p>
+      <div class="reviewer">
+        <div class="avatar" style="background:#117A65; width:36px; height:36px; font-size:0.75rem;">SC</div>
+        <div class="reviewer-info"><strong>Sarah C.</strong><span>Party order</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="contact" class="newsletter-section">
+  <div class="section-label" style="color:#AAAAAA;">Stay Updated</div>
+  <div class="section-title">Get New Recipes Weekly</div>
+  <p class="section-desc">Join 12,000+ dim sum lovers. New recipes, seasonal specials, and members-only discounts — delivered every Sunday morning.</p>
+  <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+    <input type="email" placeholder="your@email.com" required id="emailInput">
+    <button type="submit" class="btn btn-solid" style="padding:12px 28px; font-size:0.95rem;">Subscribe 🎉</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">🥟 Dim Sum House</a>
+      <p>Hand-folding dumplings with love since 1998. Bringing authentic Hong Kong dim sum to your doorstep.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Explore</h5>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Order</h5>
+      <ul>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Pickup</a></li>
+        <li><a href="#">Catering</a></li>
+        <li><a href="#">Gift Cards</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Hours</h5>
+      <ul>
+        <li><a href="#">Mon–Fri: 10am–8pm</a></li>
+        <li><a href="#">Sat–Sun: 8am–9pm</a></li>
+        <li><a href="#">📍 Central, HK</a></li>
+        <li><a href="#">📞 +852 1234 5678</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Dim Sum House. All rights reserved.</span>
+    <span>Made with 🥟 in Hong Kong</span>
+  </div>
+</footer>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal">
+    <div style="position:relative;">
+      <div class="modal-banner">
+        <div class="logo">🥟 Dim Sum House</div>
+        <p>Welcome back! Sign in to access your orders.</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-tabs">
+        <div class="modal-tab active" id="tabLogin" onclick="switchModalTab('login')">Sign In</div>
+        <div class="modal-tab" id="tabRegister" onclick="switchModalTab('register')">Create Account</div>
+      </div>
+
+      <!-- LOGIN PANEL -->
+      <div class="panel active" id="panelLogin">
+        <div class="social-login">
+          <button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button>
+          <button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button>
+        </div>
+        <div class="divider">or continue with email</div>
+        <form onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" placeholder="hello@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="form-submit">Sign In →</button>
+        </form>
+        <p class="modal-footer-text"><a href="#">Forgot password?</a></p>
+      </div>
+
+      <!-- REGISTER PANEL -->
+      <div class="panel" id="panelRegister">
+        <form onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <label>Full name</label>
+            <input type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label>Email address</label>
+            <input type="email" placeholder="hello@example.com" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" placeholder="Create a password" required>
+          </div>
+          <button type="submit" class="form-submit">Create Account →</button>
+        </form>
+        <p class="modal-footer-text">By signing up you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let cartCount = 0;
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  function addToCart(name, price) {
+    cartCount++;
+    document.getElementById('cartCount').textContent = cartCount;
+    showToast(`🥟 ${name} added to cart! ($${price.toFixed(2)})`);
+  }
+
+  function switchTab(name) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    event.target.classList.add('active');
+    document.getElementById('tab-' + name).classList.add('active');
+  }
+
+  function openModal(tab) {
+    document.getElementById('modalOverlay').classList.add('open');
+    switchModalTab(tab || 'login');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function closeModalOutside(e) {
+    if (e.target === document.getElementById('modalOverlay')) closeModal();
+  }
+
+  function switchModalTab(tab) {
+    document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
+    document.getElementById('tabRegister').classList.toggle('active', tab === 'register');
+    document.getElementById('panelLogin').classList.toggle('active', tab === 'login');
+    document.getElementById('panelRegister').classList.toggle('active', tab === 'register');
+  }
+
+  function handleLogin(e) {
+    e.preventDefault();
+    closeModal();
+    showToast('✅ Signed in successfully! Welcome back.');
+  }
+
+  function handleRegister(e) {
+    e.preventDefault();
+    closeModal();
+    showToast('🎉 Account created! Welcome to Dim Sum House.');
+  }
+
+  function socialLogin(provider) {
+    closeModal();
+    showToast(`✅ Signed in with ${provider}!`);
+  }
+
+  function subscribeNewsletter(e) {
+    e.preventDefault();
+    const email = document.getElementById('emailInput').value;
+    document.getElementById('emailInput').value = '';
+    showToast(`🎉 Subscribed! Check ${email} for a welcome gift.`);
+  }
+
+  function toggleMobile() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
