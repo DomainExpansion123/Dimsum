@@ -21,8 +21,8 @@
     <div class="header-inner">
       <nav class="nav-left">
         <a href="#">Trang Chủ</a>
-        <a href="#">Công Thức</a>
-        <a href="#">Câu Chuyện</a>
+        <a href="#recipes" class="nav-scroll">Công Thức</a>
+        <a href="#stories" class="nav-scroll">Câu Chuyện</a>
       </nav>
 
       <div class="logo">
@@ -33,7 +33,7 @@
       </div>
 
       <nav class="nav-right">
-        <a href="#">Về Mình</a>
+        <a href="#about" class="nav-scroll">Về Mình</a>
         <a href="#">Bắt Đầu Đây</a>
         <button class="lab-btn" id="openLabModal" aria-label="Lab Thực Hành">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
@@ -52,9 +52,9 @@
     <!-- MOBILE NAV -->
     <div class="mobile-nav">
       <a href="#">Trang Chủ</a>
-      <a href="#">Công Thức</a>
-      <a href="#">Câu Chuyện</a>
-      <a href="#">Về Mình</a>
+      <a href="#recipes" class="nav-scroll">Công Thức</a>
+      <a href="#stories" class="nav-scroll">Câu Chuyện</a>
+      <a href="#about" class="nav-scroll">Về Mình</a>
       <a href="#">Bắt Đầu Đây</a>
     </div>
   </header>
@@ -76,7 +76,7 @@
   </section>
 
   <!-- CATEGORY PILLS -->
-  <section class="categories" id="recipes">
+  <section class="categories">
     <div class="container">
       <div class="cat-scroll">
         <a href="#" class="cat-pill active">Tất Cả</a>
@@ -92,7 +92,7 @@
   </section>
 
   <!-- FEATURED POST -->
-  <section class="featured">
+  <section class="featured" id="recipes">
     <div class="container">
       <div class="section-label">✦ Bài Viết Nổi Bật</div>
       <div class="featured-grid">
@@ -246,6 +246,145 @@
     </div>
   </section>
 
+  <!-- STORIES SECTION -->
+  <section class="stories-section" id="stories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">✦ Câu Chuyện</div>
+        <h2 class="section-title">Chuyện Bếp & Ký Ức</h2>
+        <p class="section-desc">Những tản văn nhỏ về buổi sáng, về ký ức và tình yêu dành cho ẩm thực Việt.</p>
+      </div>
+      <div class="stories-grid">
+
+        <article class="story-card story-card--featured">
+          <a href="#">
+            <div class="story-img-wrap">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=900&q=80" alt="Bếp nhà" />
+              <span class="story-badge">📖 Tản Văn</span>
+            </div>
+            <div class="story-info">
+              <span class="post-date">2 tháng 6, 2025</span>
+              <h2>Mùi Cháo Trắng Và Những Buổi Sáng Ở Nhà Ngoại</h2>
+              <p>Có những mùi hương gắn liền với một khoảng ký ức không thể nào quên — mùi cháo trắng nấu bằng nồi đất, mùi gừng già, mùi khói bếp len lỏi qua kẽ cửa buổi sáng sớm...</p>
+              <span class="read-more">Đọc Câu Chuyện →</span>
+            </div>
+          </a>
+        </article>
+
+        <div class="stories-side">
+          <article class="story-card-mini">
+            <a href="#">
+              <div class="story-mini-img">
+                <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=400&q=80" alt="Chợ sáng" />
+              </div>
+              <div class="story-mini-info">
+                <span class="story-tag-sm">🌅 Góc Nhìn</span>
+                <h3>5 Giờ Sáng Ở Chợ Bình Tây — Khi Sài Gòn Chưa Thức</h3>
+                <p>Những gánh hàng, tiếng rao, và bát bún riêu đầu ngày quen thuộc như hơi thở.</p>
+                <span class="post-date">26 tháng 5, 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#">
+              <div class="story-mini-img">
+                <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=400&q=80" alt="Bánh cuốn" />
+              </div>
+              <div class="story-mini-info">
+                <span class="story-tag-sm">🍽️ Hồi Ức</span>
+                <h3>Bánh Cuốn Cô Hai Và Bí Mật Của Tấm Bánh Mỏng Tang</h3>
+                <p>Cô Hai bán bánh cuốn đã ba mươi năm, tay thoăn thoắt, mỗi miếng bánh như một lá thư gửi từ quá khứ.</p>
+                <span class="post-date">19 tháng 5, 2025</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="story-card-mini">
+            <a href="#">
+              <div class="story-mini-img">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80" alt="Ăn sáng một mình" />
+              </div>
+              <div class="story-mini-info">
+                <span class="story-tag-sm">✨ Suy Ngẫm</span>
+                <h3>Nghệ Thuật Ăn Sáng Một Mình — Và Tại Sao Điều Đó Thật Tuyệt</h3>
+                <p>Không vội vàng, không cuộc gọi, chỉ bạn và tô phở bốc khói. Đây là nghi lễ nhỏ mình trân trọng mỗi ngày.</p>
+                <span class="post-date">12 tháng 5, 2025</span>
+              </div>
+            </a>
+          </article>
+        </div>
+
+      </div>
+      <div class="view-more">
+        <a href="#" class="btn-outline">Xem Tất Cả Câu Chuyện</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECIPE SPOTLIGHT SECTION -->
+  <section class="recipe-spotlight">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">✦ Công Thức Tuần Này</div>
+        <h2 class="section-title">Làm Ngay Cuối Tuần</h2>
+        <p class="section-desc">Ba công thức mình đang nấu thử — đơn giản, ngon, và cực kỳ phù hợp cho sáng thứ Bảy lười biếng.</p>
+      </div>
+      <div class="recipe-spotlight-grid">
+
+        <div class="recipe-big-card">
+          <a href="#">
+            <div class="recipe-img-wrap">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80" alt="Pizza trứng" />
+              <div class="recipe-meta-badges">
+                <span class="recipe-badge-time">⏱ 20 phút</span>
+                <span class="recipe-badge-level">🌿 Dễ</span>
+              </div>
+            </div>
+            <div class="recipe-big-info">
+              <span class="tag-badge">Trứng</span>
+              <h2>Shakshuka Kiểu Việt — Trứng Sốt Cà Chua Ớt Thơm Lừng</h2>
+              <p>Phiên bản Shakshuka gần gũi hơn với khẩu vị Việt: thêm sả, ớt hiểm và một chút nước mắm. Ăn kèm bánh mì giòn là hoàn hảo.</p>
+              <div class="recipe-ingredients-preview">
+                <span>🍅 Cà chua</span><span>🥚 Trứng gà</span><span>🌶 Ớt chuông</span><span>🧅 Hành tây</span>
+              </div>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="recipe-small-cards">
+          <a href="#" class="recipe-sm-card">
+            <div class="recipe-sm-img">
+              <img src="https://images.unsplash.com/photo-1493770348161-369560ae357d?w=500&q=80" alt="Smoothie bowl" />
+              <span class="recipe-badge-time">⏱ 10 phút</span>
+            </div>
+            <div class="recipe-sm-info">
+              <span class="tag-badge">Lành Mạnh</span>
+              <h3>Smoothie Bowl Xoài Dừa — Mát Lạnh & Đầy Màu Sắc</h3>
+              <p>Xay mịn xoài với dừa, xếp topping đẹp mắt. Không cần nấu, không cần lò — chỉ cần máy xay.</p>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
+
+          <a href="#" class="recipe-sm-card">
+            <div class="recipe-sm-img">
+              <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=500&q=80" alt="Bánh mì nướng bơ" />
+              <span class="recipe-badge-time">⏱ 8 phút</span>
+            </div>
+            <div class="recipe-sm-info">
+              <span class="tag-badge">Bánh Mì</span>
+              <h3>Bánh Mì Nướng Bơ Mật Ong Muối Biển</h3>
+              <p>Ba nguyên liệu, tám phút, một đĩa bánh mì nướng bơ giòn ngọt mặn không thể cưỡng lại.</p>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- NEWSLETTER BANNER -->
   <section class="newsletter">
     <div class="newsletter-inner">
@@ -261,7 +400,7 @@
   </section>
 
   <!-- SIDEBAR + CONTENT ROW -->
-  <section class="content-sidebar">
+  <section class="content-sidebar" id="about">
     <div class="container">
       <div class="cs-grid">
 
@@ -271,7 +410,7 @@
             <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=500&q=80" alt="Tác giả" />
           </div>
           <div class="about-text">
-            <h3>Xin chào! Mình là Linh. 👋</h3>
+            <h3>Xin chào! Mình là Đức Anh. 👋</h3>
             <p>Mình là người Sài Gòn, mê nấu ăn từ nhỏ. Blog này là nơi mình lưu lại những công thức điểm tâm yêu thích — đơn giản, ngon, và ai cũng làm được.</p>
             <a href="#" class="btn-text">Tìm Hiểu Thêm →</a>
           </div>

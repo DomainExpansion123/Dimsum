@@ -8,6 +8,28 @@ hamburger?.addEventListener('click', () => {
   hamburger.classList.toggle('active');
 });
 
+// Smooth scroll for nav links
+document.querySelectorAll('a.nav-scroll').forEach(link => {
+  link.addEventListener('click', function (e) {
+    const targetId = this.getAttribute('href');
+    const target = document.querySelector(targetId);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Đóng mobile nav nếu đang mở
+      mobileNav?.classList.remove('open');
+      hamburger?.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+// Thêm scroll-margin-top cho tất cả các section target để bù header
+['#recipes', '#stories', '#about'].forEach(id => {
+  const el = document.querySelector(id);
+  if (el) el.style.scrollMarginTop = (document.querySelector('.site-header')?.offsetHeight || 70) + 12 + 'px';
+});
+
 // Category pills active state
 document.querySelectorAll('.cat-pill').forEach(pill => {
   pill.addEventListener('click', function (e) {
@@ -27,7 +49,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.post-card, .post-card-big, .post-card-side, .about-block, .popular-block, .collections-block, .col-item').forEach(el => {
+document.querySelectorAll('.post-card, .post-card-big, .post-card-side, .about-block, .popular-block, .collections-block, .col-item, .story-card--featured, .story-card-mini, .recipe-big-card, .recipe-sm-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(28px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
