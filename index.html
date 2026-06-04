@@ -1,599 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dim Sum House — Handcrafted Dumplings</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buổi Sáng Ngon – Blog Điểm Tâm Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
-
-<!-- NAV -->
-<nav>
-  <a href="#" class="logo">
-    <span>🥟</span> Dim Sum House <span class="logo-dot"></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#blog">Blog</a></li>
-    <li><a href="#menu">Menu</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button class="btn btn-outline" onclick="openModal('login')">Sign In</button>
-    <button class="btn btn-solid cart-btn" id="cartBtn">
-      🛒 Cart
-      <span class="cart-count" id="cartCount">0</span>
-    </button>
-    <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <span>🌿 Công thức mới mỗi tuần — <a href="#">Đăng ký nhận bản tin</a></span>
   </div>
-</nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#home" onclick="toggleMobile()">🏠 Home</a>
-  <a href="#blog" onclick="toggleMobile()">📰 Blog</a>
-  <a href="#menu" onclick="toggleMobile()">🥟 Menu</a>
-  <a href="#reviews" onclick="toggleMobile()">⭐ Reviews</a>
-  <a href="#contact" onclick="toggleMobile()">✉️ Contact</a>
-  <button class="btn btn-solid" onclick="openModal('login'); toggleMobile();" style="margin-top:8px;">Sign In</button>
-</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="nav-left">
+        <a href="#">Trang Chủ</a>
+        <a href="#">Công Thức</a>
+        <a href="#">Câu Chuyện</a>
+      </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-content">
-    <div class="hero-tag">✨ Handcrafted since 1998</div>
-    <h1>Authentic <em>Dim Sum</em><br>Straight from<br>Hong Kong</h1>
-    <p>Each piece is hand-folded with care, filled with premium ingredients, and steamed to silky perfection. Experience tradition in every bite.</p>
-    <div class="hero-actions">
-      <a href="#menu" class="btn btn-solid" style="font-size:1rem; padding:12px 28px;">Order Now 🥟</a>
-      <a href="#blog" class="btn btn-outline" style="font-size:1rem; padding:12px 28px;">Read Blog</a>
+      <div class="logo">
+        <a href="#">
+          <span class="logo-vi">Buổi Sáng</span>
+          <span class="logo-en">Ngon</span>
+        </a>
+      </div>
+
+      <nav class="nav-right">
+        <a href="#">Về Mình</a>
+        <a href="#">Bắt Đầu Đây</a>
+        <button class="lab-btn" id="openLabModal" aria-label="Lab Thực Hành">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          Lab
+        </button>
+        <button class="search-btn" aria-label="Tìm kiếm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </nav>
+
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-  <div class="hero-dumplings">
-    <div class="dumpling-card">
-      <div class="dumpling-emoji">🥟</div>
-      <div class="dumpling-info">
-        <h4>Ha Gow</h4>
-        <span>Shrimp Dumpling</span>
-        <span class="price-tag">$8.50</span>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav">
+      <a href="#">Trang Chủ</a>
+      <a href="#">Công Thức</a>
+      <a href="#">Câu Chuyện</a>
+      <a href="#">Về Mình</a>
+      <a href="#">Bắt Đầu Đây</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-sub">Blog điểm tâm Việt Nam</p>
+      <h1>Những buổi sáng<br /><em>thật ngon,</em><br />thật dễ làm.</h1>
+      <p class="hero-desc">Công thức đơn giản, nguyên liệu quen thuộc — để mỗi sáng đều là một niềm vui nhỏ.</p>
+      <a href="#recipes" class="btn-primary">Khám Phá Công Thức</a>
+    </div>
+    <div class="hero-image">
+      <div class="hero-img-frame">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80" alt="Bữa sáng ngon" />
+        <div class="hero-badge">✦ Đơn giản & Ngon</div>
       </div>
     </div>
-    <div class="dumpling-card">
-      <div class="dumpling-emoji">🍱</div>
-      <div class="dumpling-info">
-        <h4>Siu Mai</h4>
-        <span>Pork & Shrimp</span>
-        <span class="price-tag">$7.90</span>
+  </section>
+
+  <!-- CATEGORY PILLS -->
+  <section class="categories" id="recipes">
+    <div class="container">
+      <div class="cat-scroll">
+        <a href="#" class="cat-pill active">Tất Cả</a>
+        <a href="#" class="cat-pill">🍜 Phở & Bún</a>
+        <a href="#" class="cat-pill">🥐 Bánh Mì</a>
+        <a href="#" class="cat-pill">🥚 Trứng</a>
+        <a href="#" class="cat-pill">🧋 Cháo</a>
+        <a href="#" class="cat-pill">☕ Đồ Uống</a>
+        <a href="#" class="cat-pill">🍳 Nhanh &lt;15 Phút</a>
+        <a href="#" class="cat-pill">🥗 Lành Mạnh</a>
       </div>
     </div>
-    <div class="dumpling-card">
-      <div class="dumpling-emoji">🫕</div>
-      <div class="dumpling-info">
-        <h4>Congee</h4>
-        <span>Rice Porridge</span>
-        <span class="price-tag">$6.50</span>
-      </div>
-    </div>
-    <div class="dumpling-card">
-      <div class="dumpling-emoji">🍡</div>
-      <div class="dumpling-info">
-        <h4>Cheung Fun</h4>
-        <span>Rice Noodle Roll</span>
-        <span class="price-tag">$9.00</span>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- BLOG -->
-<section id="blog">
-  <div class="posts-header">
-    <div>
-      <div class="section-label">From Our Kitchen</div>
-      <div class="section-title">Latest Stories &amp; Recipes</div>
-    </div>
-    <a href="#" class="view-all">View all posts →</a>
-  </div>
-
-  <!-- FEATURED BANNER -->
-  <div class="featured-banner">
-    <div class="banner-content">
-      <div class="banner-tag">⭐ Featured</div>
-      <h2>The Art of Folding Ha Gow: A Step-by-Step Guide</h2>
-      <p>Learn the secret technique behind perfectly pleated shrimp dumplings — the dish that defines a true dim sum master. From dough to bamboo steamer.</p>
-      <a href="#" class="btn btn-solid" style="width:fit-content; padding:11px 26px;">Read Article →</a>
-    </div>
-    <div class="banner-visual">🥟</div>
-  </div>
-
-  <!-- POST CARDS -->
-  <div class="posts-grid">
-    <div class="post-card">
-      <div class="post-thumb">🫖<span class="post-cat">Tea Culture</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>May 28, 2025</span><span class="dot"></span><span>5 min read</span>
+  <!-- FEATURED POST -->
+  <section class="featured">
+    <div class="container">
+      <div class="section-label">✦ Bài Viết Nổi Bật</div>
+      <div class="featured-grid">
+        <div class="featured-main">
+          <a href="#" class="post-card-big">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=800&q=80" alt="Bánh mì trứng" />
+              <span class="tag-badge">Bánh Mì</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">28 tháng 5, 2025</span>
+              <h2>Bánh Mì Trứng Ốp La Bơ Tỏi — Chuẩn Vị Sài Gòn Buổi Sáng</h2>
+              <p>Chiếc bánh mì giòn tan, trứng vàng ươm với lớp bơ tỏi thơm lừng. Chỉ 10 phút là có bữa sáng đủ ngon để bắt đầu ngày mới.</p>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
         </div>
-        <h3><a href="#">Why Pu-erh Tea is the Perfect Companion to Dim Sum</a></h3>
-        <p>The earthy, aged notes of pu-erh cut through the richness of fatty meats and cleanse the palate between bites.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#C0392B;">LW</div>
-            <span>Lily Wong</span>
+        <div class="featured-side">
+          <a href="#" class="post-card-side">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=600&q=80" alt="Phở" />
+              <span class="tag-badge">Phở</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">21 tháng 5, 2025</span>
+              <h3>Phở Gà Tự Nấu Tại Nhà — Nước Dùng Trong Veo</h3>
+              <p>Bí quyết để có nồi phở gà thơm ngon, trong vắt ngay tại bếp nhà bạn.</p>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
+          <a href="#" class="post-card-side">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80" alt="Cháo trắng" />
+              <span class="tag-badge">Cháo</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">14 tháng 5, 2025</span>
+              <h3>Cháo Sườn Non Nấu Nồi Cơm Điện — Béo Ngậy Không Cần Canh</h3>
+              <p>Thả vào, bấm nút và để nồi cơm làm phần còn lại. Cháo mịn, sườn mềm, ngon khó tả.</p>
+              <span class="read-more">Xem Công Thức →</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST POSTS -->
+  <section class="latest">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">✦ Mới Nhất</div>
+        <h2 class="section-title">Công Thức Gần Đây</h2>
+      </div>
+      <div class="posts-grid">
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&q=80" alt="Pancake" />
+              <span class="tag-badge">Nhanh &lt;15p</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">5 tháng 6, 2025</span>
+              <h3>Pancake Chuối Yến Mạch 2 Nguyên Liệu</h3>
+              <p>Không bột mì, không đường — vẫn bông xốp và ngọt tự nhiên cực kỳ.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=600&q=80" alt="Toast" />
+              <span class="tag-badge">Lành Mạnh</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">1 tháng 6, 2025</span>
+              <h3>Avocado Toast Kiểu Việt Với Cà Chua Bi & Rau Mùi</h3>
+              <p>Bơ bổ dưỡng, cà chua tươi, một chút nước mắm chanh — hoàn toàn khác biệt.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600&q=80" alt="Trứng cuộn" />
+              <span class="tag-badge">Trứng</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">28 tháng 5, 2025</span>
+              <h3>Trứng Cuộn Nhân Phô Mai & Rau Củ — Bữa Sáng 5 Phút</h3>
+              <p>Cuộn chặt, giòn viền, nhân chảy tan — ai ăn cũng mê ngay từ miếng đầu tiên.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Canh bầu" />
+              <span class="tag-badge">Cháo</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">20 tháng 5, 2025</span>
+              <h3>Cháo Đậu Xanh Lá Dứa — Ngọt Thanh Mát Lành</h3>
+              <p>Cháo ngọt buổi sáng nhẹ bụng, thơm mùi lá dứa, giải nhiệt ngày hè hoàn hảo.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80" alt="Cà phê" />
+              <span class="tag-badge">☕ Đồ Uống</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">15 tháng 5, 2025</span>
+              <h3>Cà Phê Trứng Hà Nội Tại Nhà — Bọt Mịn, Đắng Nhẹ</h3>
+              <p>Bí quyết đánh trứng đúng cách để có ly cà phê trứng sánh mịn như ngoài quán.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+        <article class="post-card">
+          <a href="#">
+            <div class="post-img-wrap">
+              <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80" alt="Bún bò" />
+              <span class="tag-badge">Phở & Bún</span>
+            </div>
+            <div class="post-info">
+              <span class="post-date">10 tháng 5, 2025</span>
+              <h3>Bún Bò Huế Rút Gọn — Cay Thơm Đúng Điệu</h3>
+              <p>Phiên bản nhanh gọn nhưng vẫn giữ được linh hồn của tô bún bò chuẩn Huế.</p>
+              <span class="read-more">Đọc Tiếp →</span>
+            </div>
+          </a>
+        </article>
+
+      </div>
+      <div class="view-more">
+        <a href="#" class="btn-outline">Xem Tất Cả Công Thức</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER BANNER -->
+  <section class="newsletter">
+    <div class="newsletter-inner">
+      <div class="nl-deco">☀</div>
+      <h2>Nhận Công Thức Mới Mỗi Tuần</h2>
+      <p>Cùng hàng nghìn người yêu bữa sáng — nhận bộ <strong>10 công thức điểm tâm nhanh miễn phí</strong> khi đăng ký.</p>
+      <form class="nl-form" onsubmit="return false;">
+        <input type="email" placeholder="Email của bạn..." />
+        <button type="submit">Đăng Ký Ngay</button>
+      </form>
+      <p class="nl-note">Không spam. Hủy đăng ký bất cứ lúc nào. 💛</p>
+    </div>
+  </section>
+
+  <!-- SIDEBAR + CONTENT ROW -->
+  <section class="content-sidebar">
+    <div class="container">
+      <div class="cs-grid">
+
+        <!-- ABOUT BLOCK -->
+        <div class="about-block">
+          <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?w=500&q=80" alt="Tác giả" />
           </div>
-          <a href="#" class="read-more">Read →</a>
+          <div class="about-text">
+            <h3>Xin chào! Mình là Linh. 👋</h3>
+            <p>Mình là người Sài Gòn, mê nấu ăn từ nhỏ. Blog này là nơi mình lưu lại những công thức điểm tâm yêu thích — đơn giản, ngon, và ai cũng làm được.</p>
+            <a href="#" class="btn-text">Tìm Hiểu Thêm →</a>
+          </div>
         </div>
+
+        <!-- POPULAR RECIPES -->
+        <div class="popular-block">
+          <div class="section-label">✦ Phổ Biến Nhất</div>
+          <h3 class="block-title">Được Yêu Thích</h3>
+          <ul class="popular-list">
+            <li>
+              <a href="#">
+                <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=100&q=80" alt="" />
+                <div>
+                  <strong>Bánh Mì Trứng Ốp La Bơ Tỏi</strong>
+                  <span>1,240 lượt xem</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=100&q=80" alt="" />
+                <div>
+                  <strong>Cà Phê Trứng Hà Nội</strong>
+                  <span>980 lượt xem</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=100&q=80" alt="" />
+                <div>
+                  <strong>Phở Gà Nước Dùng Trong Veo</strong>
+                  <span>870 lượt xem</span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=100&q=80" alt="" />
+                <div>
+                  <strong>Pancake Chuối 2 Nguyên Liệu</strong>
+                  <span>740 lượt xem</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- COLLECTIONS -->
+        <div class="collections-block">
+          <div class="section-label">✦ Bộ Sưu Tập</div>
+          <h3 class="block-title">Theo Chủ Đề</h3>
+          <div class="collections-grid">
+            <a href="#" class="col-item" style="--bg: #f5e6c8;">
+              <span class="col-icon">🍜</span>
+              <strong>Phở & Bún</strong>
+              <small>12 công thức</small>
+            </a>
+            <a href="#" class="col-item" style="--bg: #fde8d8;">
+              <span class="col-icon">🥚</span>
+              <strong>Món Trứng</strong>
+              <small>18 công thức</small>
+            </a>
+            <a href="#" class="col-item" style="--bg: #e8f0d8;">
+              <span class="col-icon">🥗</span>
+              <strong>Lành Mạnh</strong>
+              <small>24 công thức</small>
+            </a>
+            <a href="#" class="col-item" style="--bg: #e8d8f0;">
+              <span class="col-icon">⚡</span>
+              <strong>Dưới 15 Phút</strong>
+              <small>31 công thức</small>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="post-card">
-      <div class="post-thumb">🍢<span class="post-cat">Recipe</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>May 22, 2025</span><span class="dot"></span><span>8 min read</span>
-        </div>
-        <h3><a href="#">Making Cheung Fun at Home: Silky Rice Noodle Rolls</a></h3>
-        <p>No special equipment needed. Just a wide pan, rice flour, and a few simple fillings to recreate this dim sum classic.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#D4AC0D;">KC</div>
-            <span>Kevin Chan</span>
-          </div>
-          <a href="#" class="read-more">Read →</a>
-        </div>
+  <!-- INSTAGRAM ROW -->
+  <section class="insta-section">
+    <div class="container">
+      <div class="insta-header">
+        <span>Theo dõi trên Instagram</span>
+        <a href="#" class="insta-handle">@buoisangngon</a>
+      </div>
+      <div class="insta-grid">
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300&q=80" alt="" /></a>
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=300&q=80" alt="" /></a>
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300&q=80" alt="" /></a>
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=300&q=80" alt="" /></a>
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=300&q=80" alt="" /></a>
+        <a href="#" class="insta-item"><img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?w=300&q=80" alt="" /></a>
       </div>
     </div>
+  </section>
 
-    <div class="post-card">
-      <div class="post-thumb">🏮<span class="post-cat">History</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>May 15, 2025</span><span class="dot"></span><span>6 min read</span>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner container">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-vi">Buổi Sáng</span>
+          <span class="logo-en">Ngon</span>
         </div>
-        <h3><a href="#">Yum Cha: The 2,000-Year-Old Tradition Behind Dim Sum</a></h3>
-        <p>From ancient Silk Road teahouses to your Sunday brunch table — the fascinating origins of drinking tea and nibbling snacks together.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#1A5276;">MC</div>
-            <span>Mei Chen</span>
-          </div>
-          <a href="#" class="read-more">Read →</a>
+        <p>Công thức điểm tâm đơn giản, ngon, dành cho mọi bếp Việt.</p>
+        <div class="social-links">
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">YouTube</a>
+          <a href="#">TikTok</a>
         </div>
       </div>
-    </div>
-
-    <div class="post-card">
-      <div class="post-thumb">🥩<span class="post-cat">Recipe</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>May 10, 2025</span><span class="dot"></span><span>7 min read</span>
-        </div>
-        <h3><a href="#">Char Siu Bao: Perfecting the BBQ Pork Bun</a></h3>
-        <p>Fluffy dough, glossy filling, the perfect ratio of sweet and savory — baked or steamed, this bun needs no introduction.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#117A65;">JL</div>
-            <span>James Lee</span>
-          </div>
-          <a href="#" class="read-more">Read →</a>
-        </div>
+      <div class="footer-links">
+        <h4>Công Thức</h4>
+        <a href="#">Phở & Bún</a>
+        <a href="#">Bánh Mì</a>
+        <a href="#">Món Trứng</a>
+        <a href="#">Cháo</a>
+        <a href="#">Đồ Uống</a>
+      </div>
+      <div class="footer-links">
+        <h4>Blog</h4>
+        <a href="#">Câu Chuyện</a>
+        <a href="#">Mẹo Nấu Ăn</a>
+        <a href="#">Nguyên Liệu</a>
+        <a href="#">Về Mình</a>
+      </div>
+      <div class="footer-links">
+        <h4>Khác</h4>
+        <a href="#">Bắt Đầu Đây</a>
+        <a href="#">Bản Tin</a>
+        <a href="#">Liên Hệ</a>
+        <a href="#">Chính Sách</a>
       </div>
     </div>
-
-    <div class="post-card">
-      <div class="post-thumb">🍮<span class="post-cat">Dessert</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>May 5, 2025</span><span class="dot"></span><span>4 min read</span>
-        </div>
-        <h3><a href="#">Egg Tarts: Hong Kong vs Macanese — The Great Debate</a></h3>
-        <p>Flaky pastry or shortcrust shell? Silky custard or slightly caramelized top? We compare the two iconic versions side by side.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#922B21;">SW</div>
-            <span>Sara Wu</span>
-          </div>
-          <a href="#" class="read-more">Read →</a>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <p>© 2025 Buổi Sáng Ngon. Làm bằng 💛 tại Việt Nam.</p>
     </div>
+  </footer>
 
-    <div class="post-card">
-      <div class="post-thumb">🫙<span class="post-cat">Tips</span></div>
-      <div class="post-body">
-        <div class="post-meta">
-          <span>Apr 29, 2025</span><span class="dot"></span><span>5 min read</span>
+
+  <!-- LAB MODAL -->
+  <div class="lab-modal-overlay" id="labModal" role="dialog" aria-modal="true" aria-label="Lab Thực Hành">
+    <div class="lab-modal">
+      <div class="lab-modal-header">
+        <div class="lab-modal-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          Lab Thực Hành
         </div>
-        <h3><a href="#">6 Dim Sum Etiquette Rules Every First-Timer Should Know</a></h3>
-        <p>Tapping two fingers to say thank you, filling others' cups first, and never stabbing chopsticks upright — essential table manners explained.</p>
-        <div class="post-footer">
-          <div class="author">
-            <div class="avatar" style="background:#6C3483;">AL</div>
-            <span>Amy Liu</span>
+        <button class="lab-modal-close" id="closeLabModal" aria-label="Đóng">&times;</button>
+      </div>
+      <div class="lab-modal-body">
+        <div class="lab-grid">
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab01: HTML</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab1_bai3_4/index.html" target="_blank">Lab1_3</a>
+              <a class="lab-item-btn" href="lab_extract/lab1_bai3_4/lab1_4.html" target="_blank">Lab1_4</a>
+            </div>
           </div>
-          <a href="#" class="read-more">Read →</a>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab02: Table &amp; List</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab2_bai1/lab02_bai1.html" target="_blank">Lab2_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab2_bai2/lab02_bai2.html" target="_blank">Lab2_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab2_bai3/lab02_bai3.html" target="_blank">Lab2_3</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab03: Frame &amp; Form</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab3_bai1/lab03_bai1.html" target="_blank">Lab3_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab3_bai2/lab03_bai2.html" target="_blank">Lab3_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab3_bai3/lab03_bai3.html" target="_blank">Lab3_3</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab04: CSS cơ bản</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab4_bai1/index.html" target="_blank">Lab4_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab4_bai2/index.html" target="_blank">Lab4_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab4_bai3/index.html" target="_blank">Lab4_3</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab05: Các thuộc tính CSS</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab5_bai1/index.html" target="_blank">Lab5_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab5_bai2/index.html" target="_blank">Lab5_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab5_bai3/index.html" target="_blank">Lab5_3</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab06: Layout Responsive CSS</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab6_bai1/index.html" target="_blank">Lab6_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab6_bai2/index.html" target="_blank">Lab6_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab6_bai3/index.html" target="_blank">Lab6_3</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab07: Javascript</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab7_bai1/index.html" target="_blank">Lab7_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab7_bai2/index.html" target="_blank">Lab7_2</a>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div class="lab-card-title">Lab08: Javascript nâng cao</div>
+            <div class="lab-links">
+              <a class="lab-item-btn" href="lab_extract/lab8_bai1/index.html" target="_blank">Lab8_1</a>
+              <a class="lab-item-btn" href="lab_extract/lab8_bai2/index.html" target="_blank">Lab8_2</a>
+              <a class="lab-item-btn" href="lab_extract/lab8_bai3/index.html" target="_blank">Lab8_3</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- MENU/SHOP -->
-<section id="menu" class="menu-section">
-  <div class="section-label">Our Menu</div>
-  <div class="section-title">Order Fresh Today</div>
-  <p class="section-desc" style="margin-bottom:32px;">All items made to order. Free delivery on orders above $35. Same-day pickup available.</p>
-
-  <div class="menu-tabs">
-    <button class="tab active" onclick="switchTab('steamed')">🥟 Steamed</button>
-    <button class="tab" onclick="switchTab('baked')">🥐 Baked</button>
-    <button class="tab" onclick="switchTab('rice')">🍚 Rice &amp; Noodles</button>
-    <button class="tab" onclick="switchTab('dessert')">🍮 Desserts</button>
-  </div>
-
-  <!-- Steamed -->
-  <div class="tab-panel active" id="tab-steamed">
-    <div class="menu-item">
-      <div class="menu-emoji">🥟</div>
-      <div class="menu-item-name">Ha Gow <span class="badge-new">New</span></div>
-      <div class="menu-item-desc">Delicate shrimp dumplings in translucent rice-flour wrappers, steamed until just tender. 4 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$8.50</span>
-        <button class="add-btn" onclick="addToCart('Ha Gow', 8.50)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🍱</div>
-      <div class="menu-item-name">Siu Mai</div>
-      <div class="menu-item-desc">Open-topped dumplings filled with pork and shrimp, garnished with roe. 4 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$7.90</span>
-        <button class="add-btn" onclick="addToCart('Siu Mai', 7.90)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🥬</div>
-      <div class="menu-item-name">Vegetable Dumplings</div>
-      <div class="menu-item-desc">Seasonal greens, mushrooms and tofu wrapped in delicate jade-colored skins. 4 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$7.50</span>
-        <button class="add-btn" onclick="addToCart('Vegetable Dumplings', 7.50)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🦐</div>
-      <div class="menu-item-name">Crystal Prawn Roll</div>
-      <div class="menu-item-desc">Whole tiger prawns wrapped in crystal skin, lightly sauced with XO chili. 3 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$10.50</span>
-        <button class="add-btn" onclick="addToCart('Crystal Prawn Roll', 10.50)">+</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Baked -->
-  <div class="tab-panel" id="tab-baked">
-    <div class="menu-item">
-      <div class="menu-emoji">🥩</div>
-      <div class="menu-item-name">Char Siu Bao</div>
-      <div class="menu-item-desc">Fluffy steamed or golden baked bun stuffed with honey-glazed BBQ pork. 3 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$9.00</span>
-        <button class="add-btn" onclick="addToCart('Char Siu Bao', 9.00)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🥐</div>
-      <div class="menu-item-name">Cocktail Bun <span class="badge-new">New</span></div>
-      <div class="menu-item-desc">Soft milk-bread bun with a sweet coconut-butter filling. Bakery favourite. 2 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$6.50</span>
-        <button class="add-btn" onclick="addToCart('Cocktail Bun', 6.50)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🍞</div>
-      <div class="menu-item-name">Pineapple Bolo Bun</div>
-      <div class="menu-item-desc">Crunchy cookie-crust top, pillowy interior, served warm with a pat of butter. 2 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$6.00</span>
-        <button class="add-btn" onclick="addToCart('Pineapple Bolo Bun', 6.00)">+</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Rice -->
-  <div class="tab-panel" id="tab-rice">
-    <div class="menu-item">
-      <div class="menu-emoji">🍡</div>
-      <div class="menu-item-name">Cheung Fun</div>
-      <div class="menu-item-desc">Silky rice noodle rolls with your choice of shrimp, beef or char siu, served with sweet soy.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$9.00</span>
-        <button class="add-btn" onclick="addToCart('Cheung Fun', 9.00)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🫕</div>
-      <div class="menu-item-name">Congee / Jook</div>
-      <div class="menu-item-desc">Velvety rice porridge slow-cooked for 4 hours. Choose plain, century egg & pork, or seafood.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$6.50</span>
-        <button class="add-btn" onclick="addToCart('Congee', 6.50)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🍚</div>
-      <div class="menu-item-name">Lo Mai Gai</div>
-      <div class="menu-item-desc">Sticky glutinous rice stuffed with chicken, mushrooms and lap cheong, steamed in lotus leaf.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$8.00</span>
-        <button class="add-btn" onclick="addToCart('Lo Mai Gai', 8.00)">+</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Dessert -->
-  <div class="tab-panel" id="tab-dessert">
-    <div class="menu-item">
-      <div class="menu-emoji">🍮</div>
-      <div class="menu-item-name">Egg Tart (HK Style)</div>
-      <div class="menu-item-desc">Buttery flaky shell with a wobbling, silky custard centre. Fresh from oven. 2 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$5.50</span>
-        <button class="add-btn" onclick="addToCart('Egg Tart', 5.50)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🧁</div>
-      <div class="menu-item-name">Mango Pudding</div>
-      <div class="menu-item-desc">Chilled Alphonso mango pudding, set to a trembling silkiness. Served with evaporated milk.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$5.00</span>
-        <button class="add-btn" onclick="addToCart('Mango Pudding', 5.00)">+</button>
-      </div>
-    </div>
-    <div class="menu-item">
-      <div class="menu-emoji">🍊</div>
-      <div class="menu-item-name">Sesame Ball <span class="badge-new">New</span></div>
-      <div class="menu-item-desc">Crisp fried glutinous rice ball coated in sesame seeds, filled with lotus paste. 3 pcs.</div>
-      <div class="menu-item-footer">
-        <span class="menu-price">$6.00</span>
-        <button class="add-btn" onclick="addToCart('Sesame Ball', 6.00)">+</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews" class="reviews-section">
-  <div class="section-label">What Customers Say</div>
-  <div class="section-title">Loved by Thousands</div>
-  <div class="reviews-grid">
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"The ha gow here is genuinely the best I've had outside of Hong Kong. Thin, translucent, and the shrimp filling is so fresh. We order every Sunday."</p>
-      <div class="reviewer">
-        <div class="avatar" style="background:#C0392B; width:36px; height:36px; font-size:0.75rem;">JT</div>
-        <div class="reviewer-info"><strong>Jessica T.</strong><span>Regular customer</span></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Their blog recipes are incredible — I tried making cheung fun at home following the guide and it worked perfectly on my first attempt!"</p>
-      <div class="reviewer">
-        <div class="avatar" style="background:#1A5276; width:36px; height:36px; font-size:0.75rem;">MR</div>
-        <div class="reviewer-info"><strong>Marcus R.</strong><span>Blog reader</span></div>
-      </div>
-    </div>
-    <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">"Ordered the full dim sum set for a family gathering — arrived hot, beautifully packed, and every single piece was flawless. Will definitely order again."</p>
-      <div class="reviewer">
-        <div class="avatar" style="background:#117A65; width:36px; height:36px; font-size:0.75rem;">SC</div>
-        <div class="reviewer-info"><strong>Sarah C.</strong><span>Party order</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- NEWSLETTER -->
-<section id="contact" class="newsletter-section">
-  <div class="section-label" style="color:#AAAAAA;">Stay Updated</div>
-  <div class="section-title">Get New Recipes Weekly</div>
-  <p class="section-desc">Join 12,000+ dim sum lovers. New recipes, seasonal specials, and members-only discounts — delivered every Sunday morning.</p>
-  <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-    <input type="email" placeholder="your@email.com" required id="emailInput">
-    <button type="submit" class="btn btn-solid" style="padding:12px 28px; font-size:0.95rem;">Subscribe 🎉</button>
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="#" class="logo">🥟 Dim Sum House</a>
-      <p>Hand-folding dumplings with love since 1998. Bringing authentic Hong Kong dim sum to your doorstep.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Explore</h5>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Order</h5>
-      <ul>
-        <li><a href="#">Delivery</a></li>
-        <li><a href="#">Pickup</a></li>
-        <li><a href="#">Catering</a></li>
-        <li><a href="#">Gift Cards</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Hours</h5>
-      <ul>
-        <li><a href="#">Mon–Fri: 10am–8pm</a></li>
-        <li><a href="#">Sat–Sun: 8am–9pm</a></li>
-        <li><a href="#">📍 Central, HK</a></li>
-        <li><a href="#">📞 +852 1234 5678</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2025 Dim Sum House. All rights reserved.</span>
-    <span>Made with 🥟 in Hong Kong</span>
-  </div>
-</footer>
-
-<!-- LOGIN MODAL -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
-  <div class="modal" id="modal">
-    <div style="position:relative;">
-      <div class="modal-banner">
-        <div class="logo">🥟 Dim Sum House</div>
-        <p>Welcome back! Sign in to access your orders.</p>
-      </div>
-      <button class="modal-close" onclick="closeModal()">✕</button>
-    </div>
-    <div class="modal-body">
-      <div class="modal-tabs">
-        <div class="modal-tab active" id="tabLogin" onclick="switchModalTab('login')">Sign In</div>
-        <div class="modal-tab" id="tabRegister" onclick="switchModalTab('register')">Create Account</div>
-      </div>
-
-      <!-- LOGIN PANEL -->
-      <div class="panel active" id="panelLogin">
-        <div class="social-login">
-          <button class="social-btn" onclick="socialLogin('Google')">🌐 Google</button>
-          <button class="social-btn" onclick="socialLogin('Facebook')">📘 Facebook</button>
-        </div>
-        <div class="divider">or continue with email</div>
-        <form onsubmit="handleLogin(event)">
-          <div class="form-group">
-            <label>Email address</label>
-            <input type="email" placeholder="hello@example.com" required>
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" required>
-          </div>
-          <button type="submit" class="form-submit">Sign In →</button>
-        </form>
-        <p class="modal-footer-text"><a href="#">Forgot password?</a></p>
-      </div>
-
-      <!-- REGISTER PANEL -->
-      <div class="panel" id="panelRegister">
-        <form onsubmit="handleRegister(event)">
-          <div class="form-group">
-            <label>Full name</label>
-            <input type="text" placeholder="Your name" required>
-          </div>
-          <div class="form-group">
-            <label>Email address</label>
-            <input type="email" placeholder="hello@example.com" required>
-          </div>
-          <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="Create a password" required>
-          </div>
-          <button type="submit" class="form-submit">Create Account →</button>
-        </form>
-        <p class="modal-footer-text">By signing up you agree to our <a href="#">Terms</a> &amp; <a href="#">Privacy Policy</a>.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<script>
-  let cartCount = 0;
-
-  function showToast(msg) {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
-    setTimeout(() => t.classList.remove('show'), 2800);
-  }
-
-  function addToCart(name, price) {
-    cartCount++;
-    document.getElementById('cartCount').textContent = cartCount;
-    showToast(`🥟 ${name} added to cart! ($${price.toFixed(2)})`);
-  }
-
-  function switchTab(name) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    event.target.classList.add('active');
-    document.getElementById('tab-' + name).classList.add('active');
-  }
-
-  function openModal(tab) {
-    document.getElementById('modalOverlay').classList.add('open');
-    switchModalTab(tab || 'login');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  function closeModalOutside(e) {
-    if (e.target === document.getElementById('modalOverlay')) closeModal();
-  }
-
-  function switchModalTab(tab) {
-    document.getElementById('tabLogin').classList.toggle('active', tab === 'login');
-    document.getElementById('tabRegister').classList.toggle('active', tab === 'register');
-    document.getElementById('panelLogin').classList.toggle('active', tab === 'login');
-    document.getElementById('panelRegister').classList.toggle('active', tab === 'register');
-  }
-
-  function handleLogin(e) {
-    e.preventDefault();
-    closeModal();
-    showToast('✅ Signed in successfully! Welcome back.');
-  }
-
-  function handleRegister(e) {
-    e.preventDefault();
-    closeModal();
-    showToast('🎉 Account created! Welcome to Dim Sum House.');
-  }
-
-  function socialLogin(provider) {
-    closeModal();
-    showToast(`✅ Signed in with ${provider}!`);
-  }
-
-  function subscribeNewsletter(e) {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value;
-    document.getElementById('emailInput').value = '';
-    showToast(`🎉 Subscribed! Check ${email} for a welcome gift.`);
-  }
-
-  function toggleMobile() {
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-</script>
+  <script src="js/main.js"></script>
 </body>
 </html>
